@@ -31,4 +31,4 @@ jobs:
              pip install requests
           - name: execute py script # run the run.py to get the latest data
             run: |
-              python ./analysis/dump_chembl.py ${{secrets.DBURI}} ${{secrets.BACKEND_TAGGER}}
+              python ./analysis/test.py ${{secrets.DBURI}} ${{secrets.BACKEND_TAGGER}}
