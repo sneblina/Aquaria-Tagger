@@ -7,8 +7,8 @@ print ('Argument List:', str(sys.argv[1]))
 dburi = sys.argv[1]
 dbname = "nihtrial"
 c = MongoClient( dburi )
-db = c[ dbname ]
-pubchem_cluster = db['chemical_cluster'].find_one({'name': 'pubchem_cluster'})['data']
+# db = c[ dbname ]
+# pubchem_cluster = db['chemical_cluster'].find_one({'name': 'pubchem_cluster'})['data']
 
 x = requests.get(str(sys.argv[2]))
 # print (pubchem_cluster)
