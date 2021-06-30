@@ -25,6 +25,9 @@ jobs:
             uses: actions/setup-python@v2
             with:
               python-version: 3.8 #install the python needed
+          - name: install pymongo # run the run.py to get the latest data
+            run: |
+             pip install pymongo
           - name: execute py script # run the run.py to get the latest data
             run: |
               python ./analysis/dump_chembl.py
