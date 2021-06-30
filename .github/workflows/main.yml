@@ -28,6 +28,7 @@ jobs:
           - name: install pymongo # run the run.py to get the latest data
             run: |
              pip install pymongo
+             pip install dnspython
              pip install requests
           - name: execute py script # run the run.py to get the latest data
             run: |
