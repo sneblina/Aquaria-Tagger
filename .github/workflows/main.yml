@@ -52,11 +52,14 @@ jobs:
             with:
                github_token: ${{ secrets.GITHUB_TOKEN }}
                
-          - name: Copy
-            uses: andstor/copycat-action@v3
+          - name: Pushes test file
+            uses: dmnemec/copy_file_to_another_repo_action@main
+            env:
+              API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
             with:
-              personal_token: ${{ secrets.PERSONAL_TOKEN }}
-              src_path: /.
-              dst_path: /chem_cluster.json
-              dst_owner: sneblina
-              dst_repo_name: https://github.com/sneblina/visualtag.git
+              source_file: 'test2.md'
+              destination_repo: 'dmnemec/release-test'
+              destination_folder: 'test-dir'
+              user_email: 'example@email.com'
+              user_name: 'dmnemec'
+              commit_message: 'A custom message for the commit'
