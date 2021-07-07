@@ -57,9 +57,9 @@ jobs:
             env:
               API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
             with:
-              source_file: 'test2.md'
-              destination_repo: 'dmnemec/release-test'
-              destination_folder: 'test-dir'
+              source_file: 'chem_cluster.json'
+              destination_repo: 'https://github.com/sneblina/visualtag.git'
+              destination_folder: './'
               user_email: 'example@email.com'
               user_name: 'dmnemec'
               commit_message: 'A custom message for the commit'
