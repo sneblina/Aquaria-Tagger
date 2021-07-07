@@ -50,7 +50,7 @@ jobs:
             if: steps.commit.outputs.push == 'true'
             uses: ad-m/github-push-action@master
             with:
-               github_token: ${{ secrets.GITHUB_TOKEN }}
+               github_token: ${{ secrets.ACCESS_TOKEN }}
                
           - name: Checkout publish repo
             uses: actions/checkout@v2
@@ -96,4 +96,4 @@ jobs:
               directory: publish
               repository: sneblina/visualtag
               branch: test
-              github_token: ${{ secrets.GITHUB_TOKEN }}
+              github_token: ${{ secrets.ACCESS_TOKEN }}
