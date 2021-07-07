@@ -58,7 +58,7 @@ jobs:
               API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
             with:
               source_file: 'chem_cluster.json'
-              destination_repo: 'sneblina/visualtag.git'
+              destination_repo: 'sneblina/visualtag'
               destination_folder: './'
               user_email: 'example@email.com'
               user_name: 'dmnemec'
